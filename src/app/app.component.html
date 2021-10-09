@@ -1,0 +1,11 @@
+<div class="container" [class.changed-movement]="upCounter == 0 && (upTimerStarted || finished)">
+  <div class="button-area">
+    <button class="button is-primary mr-4" [disabled]="downTimerStarted || upTimerStarted" (click)="startTimer()">Start</button>
+    <button class="button is-danger" [disabled]="!downTimerStarted && !upTimerStarted" (click)="stopTimer()">Stop</button>
+  </div>
+  <div class="text-area">
+    <p *ngIf="!downTimerStarted && !upTimerStarted" class="not-started">Not started</p>
+    <p *ngIf="downTimerStarted" class="counter">{{downCounter}}</p>
+    <p *ngIf="upTimerStarted" class="counter">{{movementCounter}} / {{upCounter}}</p>
+  </div>
+</div>
