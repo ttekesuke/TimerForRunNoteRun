@@ -47,10 +47,10 @@ export class AppComponent {
 
   increment(): void{
     this.upCounter += 1
-    if(this.upCounter == 35) {
+    if(this.upCounter == 60) {
       this.upCounter = 0
       this.movementCounter += 1
-      if(this.movementCounter == 11){
+      if(this.movementCounter == 7){
         this.upTimerStarted = false
         this.movementCounter = 0
         this.downCounter = 10
